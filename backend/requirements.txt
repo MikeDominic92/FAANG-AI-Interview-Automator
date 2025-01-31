@@ -1,0 +1,12 @@
+fastapi>=0.68.0
+uvicorn>=0.15.0
+python-dotenv>=0.19.0
+sentence-transformers>=2.2.0
+chromadb>=0.3.0
+openai>=1.0.0
+python-multipart>=0.0.5
+PyPDF2>=3.0.0
+python-multipart>=0.0.5
+whispercpp>=0.0.17
+soundfile>=0.12.1
+numpy>=1.21.0
