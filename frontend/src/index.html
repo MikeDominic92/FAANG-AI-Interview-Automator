@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview AI Assistant</title>
+    <link href="https://cdn.jsdelivr.net/npm/@mantine/core@7.5.1/dist/index.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Interview AI Assistant</h1>
+            <div class="status-bar">
+                <span id="connection-status">Disconnected</span>
+                <span id="audio-status">Audio: Off</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="controls">
+                <input type="file" id="resume-upload" accept=".pdf,.txt" style="display: none;">
+                <button id="upload-btn" class="btn primary">Upload Resume</button>
+                <button id="start-btn" class="btn success">Start Interview</button>
+                <button id="clear-btn" class="btn secondary">Clear Chat</button>
+            </div>
+
+            <div class="chat-container">
+                <div id="chat-messages"></div>
+                <div class="audio-visualizer">
+                    <canvas id="visualizer"></canvas>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="settings">
+                <button id="settings-btn" class="btn">⚙️ Settings</button>
+            </div>
+        </footer>
+    </div>
+
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <h2>Settings</h2>
+            <div class="setting-item">
+                <label>Audio Input Device:</label>
+                <select id="audio-input-select"></select>
+            </div>
+            <div class="setting-item">
+                <label>Response Speed:</label>
+                <select id="response-speed">
+                    <option value="fast">Fast</option>
+                    <option value="balanced" selected>Balanced</option>
+                    <option value="thorough">Thorough</option>
+                </select>
+            </div>
+            <button id="save-settings" class="btn primary">Save</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
